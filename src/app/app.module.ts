@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ import { MatIconModule } from '@angular/material/icon';
     BuscarCandidatoComponent,
     BuscarTecnologiaComponent,
     CriarTecnologiaComponent,
-    AlterarTecnologiaComponent
+    AlterarTecnologiaComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +67,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatTableModule,
     MatAutocompleteModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
 
   ],
   providers: [],
