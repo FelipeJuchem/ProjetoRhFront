@@ -1,0 +1,16 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Descrição</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let tecnologia of tecnologias">
+      <td>{{tecnologia.id}}</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{tecnologia.descricao}}</td>
+      <td title="Alterar" class="alterar"><a routerLink="/tecnologias/alterarTecnologia/{{tecnologia.id}}">&#9998;</a></td>
+      <td title="Excluir" class="deletar"><a (click)="deletar(tecnologia.id!)">&#10060;</a></td>
+    </tr>
+  </table>
+</div>

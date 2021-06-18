@@ -1,0 +1,24 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Idade</th>
+      <th>Cpf</th>
+      <th>Vaga</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let candidato of candidatos">
+      <td>{{candidato.id}}</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{candidato.nome}}</td>
+      <td>{{candidato.sobrenome}}</td>
+      <td>{{candidato.idade}}</td>
+      <td>{{candidato.cpf}}</td>
+      <td>{{candidato.vagaDescricao}}</td>
+      <td title="Alterar" class="alterar"><a routerLink="/candidatos/alterarCandidato/{{candidato.id}}">&#9998;</a></td>
+      <td title="Excluir" class="deletar"><a (click)="deletar(candidato.id!)">&#10060;</a></td>
+    </tr>
+  </table>
+</div>

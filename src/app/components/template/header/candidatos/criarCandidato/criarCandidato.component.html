@@ -1,0 +1,42 @@
+<div class="box">
+  <mat-card class="mat-box">
+  <mat-card-title>Novo Candidato</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Sobrenome" [(ngModel)]="candidato.sobrenome" name="sobrenome">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Idade" [(ngModel)]="candidato.idade" name="idade">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
+      </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Vaga</mat-label>
+          <input type="text"
+                 placeholder="Escolha a vaga"
+                 aria-label="Vaga"
+                 matInput
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let vaga of vagas" [value]="vaga.descricao" (click)="onAtualizar(vaga)">
+            {{vaga.descricao}}
+          </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+
+  </form>
+  <button mat-raised-button (click)="criarCandidato()">
+      Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
+</mat-card>
+</div>

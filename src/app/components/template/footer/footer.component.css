@@ -1,0 +1,16 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(gray, black);
+  align-items: center;
+
+}
+
+
+
+
+

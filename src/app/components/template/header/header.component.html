@@ -1,0 +1,25 @@
+<mat-toolbar class="header mat-elevation-z4">
+  <span>
+      <a>
+          <img class="logo" src="assets/imagens/logo.png" alt="logo">
+      </a>
+  </span>
+  <span class="title-group">
+      <a routerLink="">
+          <i class="material-icons">
+              home
+          </i>
+          RhDrunk Home
+      </a>
+  </span>
+  <div class="menu">
+    <ul>
+      <li><a routerLink="/vagas">Gerenciar Vagas</a></li>
+      <li><a routerLink="/tecnologias">Gerenciar Tecnologias</a></li>
+      <li><a routerLink="/candidatos">Gerenciar Candidatos</a></li>
+    </ul>
+  </div>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>

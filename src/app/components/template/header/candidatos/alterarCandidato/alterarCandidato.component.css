@@ -1,0 +1,73 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-box{
+  width: 30%;
+  display: inline-grid;
+
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button{
+  background-color: lightblue;
+  margin: 5px;
+
+}
+
+button:hover{
+  background-color: teal;
+}
+
+.add-tecnologia{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.invisivel{
+  display: none;
+}
+
+.deletar:hover{
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+
+
+
+.tabela{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+table{
+  border-style: solid;
+  border-width: 1px;
+  border-color: cadetblue;
+  background-color: white;
+  box-shadow: 2px 2px 2px black;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+td{
+  border-left-style: dashed;
+  border-left-width: 1px;
+  border-left-color: cadetblue;
+  border-bottom-color: black;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: cadetblue;
+}
+

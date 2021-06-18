@@ -1,0 +1,18 @@
+<div class="box">
+  <mat-card class="mat-box">
+    <mat-card-title>Nova Vaga</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição da Vaga" [(ngModel)]="vaga.descricao" name="descricao">
+
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="criarVaga()">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+  </mat-card>
+</div>

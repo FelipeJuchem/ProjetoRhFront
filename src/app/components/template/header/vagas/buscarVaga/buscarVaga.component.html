@@ -1,0 +1,21 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Descrição</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let vaga of vagas">
+      <td>{{vaga.id}}</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{vaga.descricao}}</td>
+      <td title="Alterar" class="alterar"><a routerLink="/vagas/alterarVaga/{{vaga.id}}">&#9998;</a></td>
+      <td title="Excluir" class="deletar"><a (click)="deletar(vaga.id)">&#10060;</a></td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+

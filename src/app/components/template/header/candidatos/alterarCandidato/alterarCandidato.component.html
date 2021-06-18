@@ -1,0 +1,79 @@
+<div class="box">
+  <mat-card class="mat-box">
+  <mat-card-title>Alterar Candidato</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Sobrenome" [(ngModel)]="candidato.sobrenome" name="sobrenome">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Idade" [(ngModel)]="candidato.idade" name="idade">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
+      </mat-form-field>
+  </form>
+<div id="tecnologias" *ngIf="vaga != null">
+  <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+    <mat-form-field class="example-full-width">
+      <mat-label>Tecnologias</mat-label>
+      <input type="text"
+             placeholder=""
+             aria-label="Tecnologia"
+             matInput
+             [matAutocomplete]="auto2">
+      <mat-autocomplete #auto2="matAutocomplete">
+      <mat-option *ngFor="let tecnologia of vaga.tecnologias" [value]="tecnologia.descricao" (click)="onAtualizar(tecnologia)">
+        {{tecnologia.descricao}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+
+<div *ngIf="vaga.tecnologias!.length == 0">Vaga não tem tecnologias vinculadas</div>
+<button mat-raised-button (click)="addTecnologia()">Adicionar Tecnologia</button>
+<div *ngIf="candidato.tecnologias!.length != 0">
+
+  <table>
+    <label><strong>Tecnologias vinculadas:</strong></label>
+      <tr>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Peso</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let tecnologia of candidato.tecnologias">
+        <td>{{tecnologia.id}}</td>
+        <td>{{tecnologia.descricao}}</td>
+        <td>{{tecnologia.peso}}</td>
+        <td title="Excluir" class="deletar"><a (click)="deletar(tecnologia.id!)">&#10060;</a></td>
+      </tr>
+      <tr class="add">
+        <td class="add"></td>
+        <td class="add"></td>
+        <td class="add"></td>
+        <td class="add">
+        </td>
+      </tr>
+  </table>
+</div>
+
+
+
+  <button mat-raised-button (click)="salvar()">
+    Salvar
+  </button>
+  <button mat-raised-button (click)="cancel()">
+  Cancelar
+  </button>
+</mat-card>
+</div>
+
+
+
+
+
+

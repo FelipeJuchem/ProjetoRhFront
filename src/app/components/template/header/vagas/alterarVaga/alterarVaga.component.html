@@ -1,0 +1,84 @@
+<div class="box">
+  <mat-card class="mat-box">
+    <mat-card-title>Alterar Vaga</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição da Vaga" [(ngModel)]="vaga.descricao" name="descricao">
+        </mat-form-field>
+        <button mat-button (click)="mudarMostrar()">Vincular Tecnologia</button>
+
+        <div *ngIf="vaga.tecnologias!.length == 0">Vaga não tem tecnologias vinculadas</div>
+        <div class="tabela" *ngIf="vaga.tecnologias!.length != 0 ">
+          <table>
+              <label><strong>Tecnologias vinculadas:</strong></label>
+                <tr>
+                  <th>Id</th>
+                  <th>Descrição</th>
+                  <th>Peso</th>
+                  <th></th>
+                </tr>
+                <tr *ngFor="let tecnologia of vaga.tecnologias">
+                  <td>{{tecnologia.id}}</td>
+                  <td>{{tecnologia.descricao}}</td>
+                  <td>{{tecnologia.peso}}</td>
+                  <td title="Excluir" class="deletar"><a (click)="deletar(tecnologia.id!)">&#10060;</a></td>
+                </tr>
+                <tr class="add">
+                  <td class="add"></td>
+                  <td class="add"></td>
+                  <td class="add"></td>
+                  <td class="add">
+                  </td>
+                </tr>
+            </table>
+        </div>
+
+        <div *ngIf="mostrar" id="nova-tecnologia" >
+          <p><strong>Vincular Tecnologia</strong></p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Tecnologia</mat-label>
+            <input type="text"
+                   placeholder="Escolha a tecnologia"
+                   aria-label="Tecnologia"
+                   matInput
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let tecnologia of tecnologias" [value]="tecnologia.descricao" (click)="onAtualizar(tecnologia)">
+              {{tecnologia.descricao}}
+            </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <input matInput placeholder="Peso" label="Peso" title="Peso" [(ngModel)]="vagaTecnologia.peso" name="peso" class="peso">
+          <button mat-raised-button (click)="addTecnologia()" class="adicionar">
+            Adicionar
+          </button>
+        </div>
+        <!-- <div class="tabela">
+          <table>
+            <label><strong>Candidatos</strong></label>
+              <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+              </tr>
+              <tr *ngFor="let candidato of vaga.candidatos">
+                <td>{{candidato.nome}}</td>
+                <td>{{candidato.sobrenome}}</td>
+                <td>{{candidato.idade}}</td>
+                <td>{{candidato.cpf}}</td>
+              </tr>
+          </table>
+        </div> -->
+
+    </form>
+    <button mat-raised-button (click)="salvar()">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+  </mat-card>
+</div>
+<div *ngIf="error">
+    {{error}}
+</div>

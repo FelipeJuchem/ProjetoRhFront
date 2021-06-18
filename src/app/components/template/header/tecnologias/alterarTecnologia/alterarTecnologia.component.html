@@ -1,0 +1,17 @@
+<div class="box">
+  <mat-card class="mat-box">
+    <mat-card-title>Alterar Vaga</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição da Vaga" [(ngModel)]="tecnologia.descricao" name="descricao">
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="salvar()">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+  </mat-card>
+</div>

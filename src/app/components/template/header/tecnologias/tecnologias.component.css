@@ -1,0 +1,28 @@
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 0px;
+}
+
+
+ul li button{
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: white;
+  text-shadow: 2px 2px gray
+}
+
+button:hover{
+  background-color: rgb(209, 191, 191);
+  font-size: 15px;
+}

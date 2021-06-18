@@ -1,0 +1,23 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-box{
+  width: 30%;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button{
+  background-color: lightblue;
+  margin-right: 50px;
+}
+
+button:hover{
+  background-color: teal;
+}

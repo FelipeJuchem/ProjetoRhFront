@@ -1,0 +1,44 @@
+.tabela{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+table{
+  background-color: white;
+  box-shadow: 10px 5px 5px black;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.alterar:hover{
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.alterar{
+  padding: 5px;
+}
+
+.deletar:hover{
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.deletar{
+  padding: 5px;
+}
+
+td{
+  border-bottom-color: black;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: cadetblue;
+}
+
+.invisivel{
+  display: none;
+}
