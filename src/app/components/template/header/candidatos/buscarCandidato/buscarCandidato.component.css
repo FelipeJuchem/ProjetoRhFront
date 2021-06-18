@@ -46,4 +46,13 @@ td{
   display: none;
 }
 
+.titulo {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: white;
+  text-shadow: 2px 2px gray
+}
 
