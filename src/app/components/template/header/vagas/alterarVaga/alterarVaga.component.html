@@ -16,11 +16,13 @@
                   <th>Descrição</th>
                   <th>Peso</th>
                   <th></th>
+                  <th></th>
                 </tr>
                 <tr *ngFor="let tecnologia of vaga.tecnologias">
                   <td>{{tecnologia.id}}</td>
                   <td>{{tecnologia.descricao}}</td>
                   <td>{{tecnologia.peso}}</td>
+                  <td title="Alterar Peso da Tecnologia" class="alterar"><a (click)="mudarMostrar2(tecnologia.id!)">&#9998;</a></td>
                   <td title="Excluir" class="deletar"><a (click)="deletar(tecnologia.id!)">&#10060;</a></td>
                 </tr>
                 <tr class="add">
@@ -49,9 +51,27 @@
             </mat-autocomplete>
           </mat-form-field>
           <input matInput placeholder="Peso" label="Peso" title="Peso" [(ngModel)]="vagaTecnologia.peso" name="peso" class="peso">
-          <button mat-raised-button (click)="addTecnologia()" class="adicionar">
-            Adicionar
-          </button>
+          <div>
+            <button mat-raised-button (click)="addTecnologia()" class="adicionar">
+              Adicionar
+            </button>
+            <button mat-raised-button (click)="mudarMostrar()" class="adicionar">
+              Cancelar
+            </button>
+          </div>
+        </div>
+
+        <div *ngIf="mostrar2" id="nova-tecnologia">
+          <p><strong>Alterar peso da Tecnologia</strong></p>
+          <input matInput placeholder="Peso" label="Peso" title="Peso" [(ngModel)]="vagaTecnologia.peso" name="peso" class="peso">
+          <div>
+            <button mat-raised-button (click)="addTecnologia()" class="adicionar">
+              Atualizar
+            </button>
+            <button mat-raised-button class="adicionar">
+              Cancelar
+            </button>
+          </div>
         </div>
         <!-- <div class="tabela">
           <table>

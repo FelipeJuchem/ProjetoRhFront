@@ -30,6 +30,10 @@ export class AlterarVagaComponent implements OnInit {
 
   mostrar: boolean = false
 
+  mostrar2: boolean = false
+
+  id: number = 0
+
   constructor(private vagaService: VagasServices,private router: Router, private route:ActivatedRoute,
     ) {
     }
@@ -58,6 +62,11 @@ export class AlterarVagaComponent implements OnInit {
 
   mudarMostrar(): void {
     this.mostrar = ! this.mostrar;
+  }
+
+  mudarMostrar2(id: number): void{
+    this.mostrar2 = ! this.mostrar2;
+    this.id = id;
   }
 
   addTecnologia():void{
