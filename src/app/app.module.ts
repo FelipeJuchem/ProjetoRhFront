@@ -1,3 +1,5 @@
+import { DeleteCandidatoDialogComponent } from './components/template/header/candidatos/buscarCandidato/deleteCandidatoDialog/deleteCandidatoDialog.component';
+import { DeleteTecnologiaDialogComponent } from './components/template/header/tecnologias/buscarTecnologia/deleteTecnologiaDialog/deleteTecnologiaDialog.component';
 import { DeleteDialogComponent } from './components/template/header/vagas/buscarVaga/deleteDialog/deleteDialog.component';
 import { RelatoriosComponent } from './components/template/header/relatorios/relatorios.component';
 import { AlterarTecnologiaComponent } from './components/template/header/tecnologias/alterarTecnologia/alterarTecnologia.component';
@@ -54,7 +56,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     CriarTecnologiaComponent,
     AlterarTecnologiaComponent,
     RelatoriosComponent,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    DeleteTecnologiaDialogComponent,
+    DeleteCandidatoDialogComponent
   ],
   imports: [
     BrowserModule,

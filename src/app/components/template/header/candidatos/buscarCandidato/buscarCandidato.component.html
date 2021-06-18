@@ -22,7 +22,7 @@
       <td>{{candidato.cpf}}</td>
       <td>{{candidato.vagaDescricao}}</td>
       <td title="Alterar" class="alterar"><a routerLink="/candidatos/alterarCandidato/{{candidato.id}}">&#9998;</a></td>
-      <td title="Excluir" class="deletar"><a (click)="deletar(candidato.id!)">&#10060;</a></td>
+      <td title="Excluir" class="deletar"><a (click)="openDialog(candidato.id!)">&#10060;</a></td>
     </tr>
   </table>
 </div>

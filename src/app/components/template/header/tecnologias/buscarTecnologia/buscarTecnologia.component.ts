@@ -1,3 +1,4 @@
+import { DeleteTecnologiaDialogComponent } from './deleteTecnologiaDialog/deleteTecnologiaDialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { TecnologiaServices } from './../tecnologias.services/tecnologia.service';
@@ -22,28 +23,22 @@ export class BuscarTecnologiaComponent implements OnInit {
     })
   }
 
-  deletar(id: number): void{
-    this.tecnologiaServices.deletar(id).subscribe(()=>{
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-      this.tecnologiaServices.showMessage('Deletado com sucesso!')
-    })
-  }
+  openDialog(id: number): void {
+    const dialogRef = this.dialog.open(DeleteTecnologiaDialogComponent, {
+      width: '250px',
+      data: {id: id}
+ });
 
-
-  // openDialog(id: number): void {
-  //   const dialogRef = this.dialog.open(DeleteDialogComponent, {
-  //     width: '250px',
-  //     data: {id: id}
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed');
-  //   });
-  // }
-
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+   });
+ }
 
 }
+
+
+
+
+
 
 
