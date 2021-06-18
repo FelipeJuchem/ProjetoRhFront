@@ -14,7 +14,7 @@
       <td>{{vaga.id}}</td>
       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{vaga.descricao}}</td>
       <td title="Alterar" class="alterar"><a routerLink="/vagas/alterarVaga/{{vaga.id}}">&#9998;</a></td>
-      <td title="Excluir" class="deletar"><a (click)="deletar(vaga.id)">&#10060;</a></td>
+      <td title="Excluir" class="deletar"><a (click)="openDialog(vaga.id)">&#10060;</a></td>
     </tr>
   </table>
 </div>

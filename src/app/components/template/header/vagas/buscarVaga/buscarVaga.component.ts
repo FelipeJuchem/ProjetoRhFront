@@ -1,3 +1,4 @@
+import { DeleteDialogComponent } from './deleteDialog/deleteDialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Vaga } from './../../../../../models/vaga';
@@ -22,30 +23,16 @@ export class BuscarVagaComponent implements OnInit {
     })
   }
 
-  deletar(id: number): void{
-    this.vagaServices.deletar(id).subscribe(()=>{
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-      this.vagaServices.showMessage('Deletado com sucesso!')
-    })
+  openDialog(id: number): void {
+     const dialogRef = this.dialog.open(DeleteDialogComponent, {
+       width: '250px',
+       data: {id: id}
+  });
+
+     dialogRef.afterClosed().subscribe(result => {
+       console.log('The dialog was closed');
+    });
   }
-
-
-
-
-
-
-  // openDialog(id: number): void {
-  //   const dialogRef = this.dialog.open(DeleteDialogComponent, {
-  //     width: '250px',
-  //     data: {id: id}
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed');
-  //   });
-  // }
 
 
 
