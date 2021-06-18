@@ -1,0 +1,18 @@
+<div class="titulo">
+  <p>Selecione uma vaga para gerar o relatório</p>
+</div>
+
+<div class="tabela" *ngIf="vagas.length! != 0">
+  <table>
+    <tr>
+
+      <th>Descrição</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let vaga of vagas">
+      <td><a routerLink="/relatorio/{{vaga.id}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{vaga.descricao}}</a></td>
+
+    </tr>
+  </table>
+</div>

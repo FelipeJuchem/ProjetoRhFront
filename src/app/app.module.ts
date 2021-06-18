@@ -1,3 +1,4 @@
+import { RelatoriosComponent } from './components/template/header/relatorios/relatorios.component';
 import { AlterarTecnologiaComponent } from './components/template/header/tecnologias/alterarTecnologia/alterarTecnologia.component';
 import { BuscarTecnologiaComponent } from './components/template/header/tecnologias/buscarTecnologia/buscarTecnologia.component';
 import { BuscarCandidatoComponent } from './components/template/header/candidatos/buscarCandidato/buscarCandidato.component';
@@ -51,6 +52,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     BuscarTecnologiaComponent,
     CriarTecnologiaComponent,
     AlterarTecnologiaComponent,
+    RelatoriosComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatAutocompleteModule,
     MatIconModule,
     MatDialogModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

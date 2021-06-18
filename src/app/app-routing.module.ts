@@ -1,3 +1,4 @@
+import { RelatoriosComponent } from './components/template/header/relatorios/relatorios.component';
 import { AlterarTecnologiaComponent } from './components/template/header/tecnologias/alterarTecnologia/alterarTecnologia.component';
 import { AlterarCandidatoComponent } from './components/template/header/candidatos/alterarCandidato/alterarCandidato.component';
 import { AlterarVagaComponent } from './components/template/header/vagas/alterarVaga/alterarVaga.component';
@@ -55,6 +56,9 @@ const routes: Routes = [
   },{
     path:"tecnologias/alterarTecnologia/:id",
     component: AlterarTecnologiaComponent
+  },{
+    path:"relatorios",
+    component: RelatoriosComponent
   }
 
 
