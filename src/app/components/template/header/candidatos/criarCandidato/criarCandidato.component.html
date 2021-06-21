@@ -3,7 +3,7 @@
   <mat-card-title>Novo Candidato</mat-card-title>
   <form>
       <mat-form-field>
-          <input type="text" mask="S" matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
+          <input type="text" maxlength="14" matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
       </mat-form-field>
       <mat-form-field>
           <input type="text" matInput placeholder="Sobrenome" [(ngModel)]="candidato.sobrenome" name="sobrenome">

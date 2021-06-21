@@ -1,5 +1,9 @@
-<div class="titulo">
+<div class="titulo" *ngIf="vagas.length! != 0">
   <p>Selecione uma vaga para gerar um relatório</p>
+</div>
+
+<div class="titulo" *ngIf="vagas.length! == 0">
+  <p>Não existem vagas para gerar relatório!</p>
 </div>
 
 <div class="tabela" *ngIf="vagas.length! != 0">

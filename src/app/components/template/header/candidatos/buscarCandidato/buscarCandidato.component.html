@@ -2,7 +2,7 @@
   <p>Candidatos</p>
 </div>
 
-<div class="tabela">
+<div class="tabela" *ngIf="error == null">
   <table>
     <tr>
       <th>Id</th>
@@ -14,7 +14,7 @@
       <th></th>
       <th></th>
     </tr>
-    <tr *ngFor="let candidato of candidatos">
+  <tr *ngFor="let candidato of candidatos">
       <td>{{candidato.id}}</td>
       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{candidato.nome}}</td>
       <td>{{candidato.sobrenome}}</td>
@@ -26,3 +26,27 @@
     </tr>
   </table>
 </div>
+
+<div class="tabela" *ngIf="error != null">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Idade</th>
+      <th>Cpf</th>
+      <th>Vaga</th>
+      <th></th>
+      <th></th>
+    </tr>
+  <tr>
+      <td>Vazio</td>
+      <td>Vazio</td>
+      <td>Vazio</td>
+      <td>Vazio</td>
+      <td>Vazio</td>
+      <td>Vazio</td>
+    </tr>
+  </table>
+</div>
+

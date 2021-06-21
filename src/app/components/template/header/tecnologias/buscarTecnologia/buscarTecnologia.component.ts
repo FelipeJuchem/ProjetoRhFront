@@ -14,13 +14,18 @@ export class BuscarTecnologiaComponent implements OnInit {
 
   tecnologias!: Tecnologia[]
 
+  error = null
+
   constructor(private tecnologiaServices: TecnologiaServices, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.tecnologiaServices.read().subscribe(tecnologias => {
       this.tecnologias = tecnologias
       console.log(tecnologias)
-    })
+    },(response: any) => {
+      alert(response.error);
+      this.error = response.error;
+      })
   }
 
   openDialog(id: number): void {

@@ -17,6 +17,8 @@ export class BuscarCandidatoComponent implements OnInit {
 
   candidatos!: Candidato[]
 
+  error = null
+
   vaga: Vaga = {
     id: 0,
     descricao: ''
@@ -29,7 +31,10 @@ export class BuscarCandidatoComponent implements OnInit {
     this.candidatoServices.read().subscribe(candidatos => {
       this.candidatos = candidatos;
       console.log(candidatos);
-    })
+    } ,(response: any) => {
+      alert(response.error);
+      this.error = response.error;
+      });
   }
 
   readVaga(id: number ):void {

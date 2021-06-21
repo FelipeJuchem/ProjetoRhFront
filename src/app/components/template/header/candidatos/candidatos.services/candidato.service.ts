@@ -2,9 +2,9 @@ import { CandidatoTecnologia } from './../../../../../models/candidatoTecnologia
 import { Vaga } from './../../../../../models/vaga';
 import { Router } from '@angular/router';
 import { Candidato } from './../../../../../models/candidato';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -75,6 +75,11 @@ deletarCandidatoTecnologia(vagaId: string, tecnologiaId:number): Observable<any>
 
 readVagaById(id : number): Observable<Vaga>{
   return this.http.get<Vaga>(this.vagaComTecnologiaUrl+id);
+}
+
+private handleError(error: HttpErrorResponse){
+  console.log(error.error);
+  return throwError(error);
 }
 
 }

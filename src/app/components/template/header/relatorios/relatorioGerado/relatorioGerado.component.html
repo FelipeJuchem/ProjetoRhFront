@@ -1,40 +1,41 @@
-<div class="tabela">
-  <table>
-    <tr>
-      <th>Vaga</th>
-
-    </tr>
-    <tr><strong>{{vaga.descricao}}</strong>
-    </tr>
-  </table>
+<div class="titulo">
+  <p>Vaga</p>
 </div>
+
+<div class="tabela-vaga">
+   <strong>{{vaga.descricao}}</strong>
+</div>
+
+<hr>
 
 <div class="titulo">
   <p>Tecnologias da vaga</p>
 </div>
 
-<div class="tabela">
+<div class="tabela-vazia" *ngIf="vaga.tecnologias!.length == 0">
+  <strong>Vaga sem tecnologias cadastradas</strong>
+</div>
+
+<div class="tabela" *ngIf="vaga.tecnologias!.length != 0">
   <table>
     <tr>
       <th>Descricao</th>
       <th>Peso</th>
-
     </tr>
     <tr *ngFor="let tecnologia of vaga.tecnologias">
       <td>{{tecnologia.descricao}}</td>
       <td>{{tecnologia.peso}}</td>
-
-
-
     </tr>
   </table>
 </div>
+
+<hr>
 
 <div class="titulo">
   <p>Candidatos</p>
 </div>
 
-<div class="tabela">
+<div class="tabela" *ngIf="vaga.candidatos!.length !=0">
   <table>
     <tr>
       <th>Nome</th>
@@ -52,3 +53,4 @@
     </tr>
   </table>
 </div>
+

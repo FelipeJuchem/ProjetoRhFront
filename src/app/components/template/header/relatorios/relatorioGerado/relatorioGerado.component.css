@@ -32,3 +32,25 @@ td{
   border-bottom-color: cadetblue;
   padding-right: 50px;
 }
+
+.descricao{
+  font-size: 30px;
+
+}
+
+.tabela-vaga{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+.tabela-vazia{
+  color: orange;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 20px;
+}

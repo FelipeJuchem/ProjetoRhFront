@@ -1,7 +1,7 @@
 import { Tecnologia } from './../../../../../models/tecnologia';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -42,6 +42,11 @@ showMessage(msg: string): void {
     horizontalPosition: "right",
     verticalPosition: "top"
   })
+}
+
+private handleError(error: HttpErrorResponse){
+  console.log(error.error);
+  return throwError(error);
 }
 
 }
