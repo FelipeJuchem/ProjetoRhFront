@@ -2,7 +2,7 @@
   <p>Vagas</p>
 </div>
 
-<div class="tabela">
+<div class="tabela" *ngIf="error == null">
   <table>
     <tr>
       <th>Id</th>
@@ -19,6 +19,18 @@
   </table>
 </div>
 
+<div class="tabela" *ngIf="error != null">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Descrição</th>
+    </tr>
+    <tr>
+      <td>Vazio</td>
+      <td>Vazio</td>
+    </tr>
+  </table>
+</div>
 
 
 

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-image: linear-gradient(lightblue, darkblue);}
+html, body { height: 130%; background-image: linear-gradient(lightblue, darkblue);}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 hr{

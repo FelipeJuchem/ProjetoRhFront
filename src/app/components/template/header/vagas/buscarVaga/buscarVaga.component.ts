@@ -14,13 +14,18 @@ export class BuscarVagaComponent implements OnInit {
 
   vagas!: Vaga[]
 
+  error = null
+
   constructor(private vagaServices: VagasServices, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.vagaServices.read().subscribe(vagas => {
       this.vagas = vagas
       console.log(vagas)
-    })
+    },(response: any) => {
+      alert(response.error);
+      this.error = response.error;
+      })
   }
 
   openDialog(id: number): void {
