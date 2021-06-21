@@ -1,0 +1,54 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Vaga</th>
+
+    </tr>
+    <tr><strong>{{vaga.descricao}}</strong>
+    </tr>
+  </table>
+</div>
+
+<div class="titulo">
+  <p>Tecnologias da vaga</p>
+</div>
+
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Descricao</th>
+      <th>Peso</th>
+
+    </tr>
+    <tr *ngFor="let tecnologia of vaga.tecnologias">
+      <td>{{tecnologia.descricao}}</td>
+      <td>{{tecnologia.peso}}</td>
+
+
+
+    </tr>
+  </table>
+</div>
+
+<div class="titulo">
+  <p>Candidatos</p>
+</div>
+
+<div class="tabela">
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Idade</th>
+      <th>Pontuação das tecnologias conhecidas</th>
+    </tr>
+    <tr *ngFor="let candidato of vaga.candidatos">
+      <td>{{candidato.nome}}</td>
+      <td>{{candidato.sobrenome}}</td>
+      <td>{{candidato.idade}}</td>
+      <td>{{candidato.pontuacao}}</td>
+
+
+    </tr>
+  </table>
+</div>

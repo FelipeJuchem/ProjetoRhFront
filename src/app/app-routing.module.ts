@@ -14,6 +14,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriarTecnologiaComponent } from './components/template/header/tecnologias/criarTecnologia/criarTecnologia.component';
 import { CriarCandidatoComponent } from './components/template/header/candidatos/criarCandidato/criarCandidato.component';
+import { RelatorioGeradoComponent } from './components/template/header/relatorios/relatorioGerado/relatorioGerado.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,9 @@ const routes: Routes = [
   },{
     path:"relatorios",
     component: RelatoriosComponent
+  },{
+    path:"relatorioGerado/:id",
+    component: RelatorioGeradoComponent
   }
 
 

@@ -7,6 +7,7 @@ export interface Candidato {
   cpf?: number;
   vagaId?: number;
   vagaDescricao?: string
+  pontuacao?: number
   tecnologias?: Tecnologia[]
 }
 

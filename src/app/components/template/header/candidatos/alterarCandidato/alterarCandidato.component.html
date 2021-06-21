@@ -12,7 +12,7 @@
           <input matInput placeholder="Idade" [(ngModel)]="candidato.idade" name="idade">
       </mat-form-field>
       <mat-form-field>
-          <input matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
+          <input mask='000.000.000-00' matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
       </mat-form-field>
   </form>
 <div id="tecnologias" *ngIf="vaga != null">

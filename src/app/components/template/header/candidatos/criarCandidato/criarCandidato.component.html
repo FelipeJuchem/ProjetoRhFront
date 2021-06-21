@@ -3,16 +3,16 @@
   <mat-card-title>Novo Candidato</mat-card-title>
   <form>
       <mat-form-field>
-          <input matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
+          <input type="text" mask="S" matInput placeholder="Nome" [(ngModel)]="candidato.nome" name="nome">
       </mat-form-field>
       <mat-form-field>
-          <input matInput placeholder="Sobrenome" [(ngModel)]="candidato.sobrenome" name="sobrenome">
+          <input type="text" matInput placeholder="Sobrenome" [(ngModel)]="candidato.sobrenome" name="sobrenome">
       </mat-form-field>
       <mat-form-field>
-          <input matInput placeholder="Idade" [(ngModel)]="candidato.idade" name="idade">
+          <input  mask="00" matInput placeholder="Idade" [(ngModel)]="candidato.idade" name="idade">
       </mat-form-field>
       <mat-form-field>
-          <input matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
+          <input type="text" mask='000.000.000-00'  matInput placeholder="Cpf" [(ngModel)]="candidato.cpf" name="cpf">
       </mat-form-field>
 
         <mat-form-field class="example-full-width">

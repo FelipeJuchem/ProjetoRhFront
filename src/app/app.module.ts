@@ -35,6 +35,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RelatorioGeradoComponent } from './components/template/header/relatorios/relatorioGerado/relatorioGerado.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     RelatoriosComponent,
     DeleteDialogComponent,
     DeleteTecnologiaDialogComponent,
-    DeleteCandidatoDialogComponent
+    DeleteCandidatoDialogComponent,
+    RelatorioGeradoComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatAutocompleteModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

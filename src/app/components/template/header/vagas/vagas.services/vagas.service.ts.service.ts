@@ -16,6 +16,7 @@ export class VagasServices {
 
   resultado: boolean = false;
 
+  vagaComTecnologiasECandidatosSorteadosUrl = "http://localhost:5000/api/Vagas/GetVagasComCandidatosSorteados/"
   baseUrl = "http://localhost:5000/api/vagas"
   idUrl = "http://localhost:5000/api/vagas/"
   tecnologiaAddUrl = "http://localhost:5000/api/vagaTecnologia"
@@ -51,6 +52,10 @@ read(): Observable<Vaga[]> {
 
 readById(id: string): Observable<Vaga>{
   return this.http.get<Vaga>(this.idUrl+id)
+}
+
+readByIdComInclude(id: string): Observable<Vaga>{
+  return this.http.get<Vaga>(`${this.vagaComTecnologiasECandidatosSorteadosUrl}${id}`)
 }
 
 readByIdNumber(id: number): Observable<Vaga>{
