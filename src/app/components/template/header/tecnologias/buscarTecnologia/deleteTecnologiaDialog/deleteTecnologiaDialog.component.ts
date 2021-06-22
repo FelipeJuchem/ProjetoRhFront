@@ -14,6 +14,8 @@ export class DeleteTecnologiaDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: {id: number}, private tecnologiaServices: TecnologiaServices
   ) { }
 
+  error = null;
+
   ngOnInit() {
   }
 
@@ -28,6 +30,9 @@ export class DeleteTecnologiaDialogComponent implements OnInit {
         window.location.reload();
       }, 1500);
       this.tecnologiaServices.showMessage('Deletado com sucesso!')
-    })
+    },(response: any) => {
+      alert(response.error);
+      this.error = response.error;
+      })
   }
 }
