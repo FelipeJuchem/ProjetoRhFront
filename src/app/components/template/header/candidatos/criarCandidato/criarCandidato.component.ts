@@ -27,7 +27,6 @@ export class CriarCandidatoComponent implements OnInit {
   }
 
   criarCandidato():void{
-    this.candidato.vagaId = this.vagaSelecionada.id;
     this.candidatoServices.criar(this.candidato).subscribe(() =>{
     this.candidatoServices.showMessage('Candidato Criado!')
     this.router.navigate(['/candidatos/buscarCandidato'])
@@ -47,6 +46,7 @@ export class CriarCandidatoComponent implements OnInit {
 
   onAtualizar(vaga: Vaga): void{
     this.vagaSelecionada = vaga;
+    this.candidato.vagaId = this.vagaSelecionada.id;
   }
 
 

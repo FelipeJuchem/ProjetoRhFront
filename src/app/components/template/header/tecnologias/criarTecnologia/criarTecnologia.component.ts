@@ -24,7 +24,7 @@ export class CriarTecnologiaComponent implements OnInit {
   criarTecnologia():void{
   this.tecnologiaService.criar(this.tecnologia).subscribe(() =>{
   this.tecnologiaService.showMessage('Tecnologia Criada!')
-  this.router.navigate(['/tecnologias'])
+  this.router.navigate(['/tecnologias/buscarTecnologia'])
   });
   }
 
